@@ -1,8 +1,19 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Bullet.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameOver.cs">
     <Files>
-      <File FileName="Assets/Script/Bullet.cs" Line="42" Column="3" />
+      <File FileName="Assets/Script/GameManager.cs" Line="13" Column="22" />
+      <File FileName="Assets/Script/Enemy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Turret.cs" Line="88" Column="1" />
+      <File FileName="Assets/Script/Shop.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/TurretBlueprint.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/BuildManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Node.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/PlayerStats.cs" Line="12" Column="16" />
+      <File FileName="Assets/Script/WaveSpawner.cs" Line="34" Column="24" />
+      <File FileName="Assets/Script/LiveUI.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/CameraController.cs" Line="21" Column="11" />
+      <File FileName="Assets/Script/GameOver.cs" Line="23" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -22,7 +22,7 @@ public class BuildManager : MonoBehaviour {
 
 	public GameObject buildEffect;
 
-	private TurretBlueprint turretToBuild;
+	private TurretBlueprint turretToBuild ;
 
 
 	public bool CanBuild {   get { return turretToBuild != null;} }

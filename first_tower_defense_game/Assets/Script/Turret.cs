@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour {
 	private Transform target;
+	private Transform enemyTarget;
 	[Header("Attributes")]
 
-	
+	//public float damage = 50f;
 	public float range = 15f;
 	public float fireRate = 1f;
 	private float fireCountdown = 0f;
@@ -44,6 +45,7 @@ public class Turret : MonoBehaviour {
 		}
 		if (nearestEnemy != null && shortestDistance <= range){
 			target = nearestEnemy.transform;
+			//enemyTarget = nearestEnemy.GetComponents<Enemy> ();
 		}
 	}
 
@@ -75,9 +77,11 @@ public class Turret : MonoBehaviour {
 		GameObject bulletGO = (GameObject)Instantiate (bulletPrefab, firePoint.position, firePoint.rotation);
 		Bullet bullet = bulletGO.GetComponent<Bullet> ();
 
+	
 		if (bullet != null)
 			bullet.Seek (target);
 	}
+
 
 	void OnDrawGizmosSelected ()
 	{

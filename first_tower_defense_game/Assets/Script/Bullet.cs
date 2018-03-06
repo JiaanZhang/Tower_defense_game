@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour {
 
 	private Transform target;
 	public float speed = 70f;
+	public int damage = 50;
 	public float explosionRadius = 0f;
 	public GameObject ImpactEffect;
 
@@ -38,38 +39,33 @@ public class Bullet : MonoBehaviour {
 		transform.LookAt (target);
 	}
 
-	void HitTarget(){
+	void HitTarget ()
+	{
+		GameObject effectIns = (GameObject)Instantiate(ImpactEffect, transform.position, transform.rotation);
+		Destroy(effectIns, 3f);
 
-		GameObject effectIns = Instantiate (ImpactEffect, transform.position, transform.rotation);
-
-		Destroy(effectIns , 3f);
-
-
-		if (explosionRadius > 0f) {
-			
-			Explode ();
-
-		} else {
+		if (explosionRadius > 0f)
+		{
+			Explode();
+		} else
+		{
 			Damage(target);
 		}
-
-
-
-		Destroy (target.gameObject);
-		Destroy (gameObject);
-
-
+		Debug.Log ("111111");
+		Destroy(gameObject);
 	}
 
-	void Damage( Transform enemy)
+
+
+
+	void Damage (Transform enemy)
 	{
-		Destroy (enemy.gameObject);
-	}
+		Enemy e = enemy.GetComponent<Enemy>();
 
-	void OnDrawGizmosSelected() {
-		Gizmos.color = Color.red;
-		Gizmos.DrawWireSphere (transform.position, explosionRadius);
-
+		if (e != null)
+		{
+			e.TakeDamage(damage);
+		}
 	}
 
 	void Explode (){
